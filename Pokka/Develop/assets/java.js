@@ -15,6 +15,7 @@ console.log(currentTime);
 
 // WHEN I click the save button for that time block
 // THEN the text for that event is saved in local storage
-
+var input = document.getElementById("save");
+localStorage.setItem("saveBtn", input.val());
 // WHEN I refresh the page
 // THEN the saved events persist
