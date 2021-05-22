@@ -22,19 +22,28 @@ console.log(currentTime);
 // create edit button
 
 // var inputEl = document.querySelector("description");
-// var description = "description"
 function captureSaveEvent(event) {
     console.log(event);
+
+    var storeDescription = localStorage.getItem(".description", input);
+
     //variable "parent div" is equal to event.target.parentdiv save variable of description event.target.parentdiv.description.innertext
     //look for the input type in the console might need to save whole parent div as a variable
-    var parentDiv = event.target.container;
-    localStorage.setItem("description", input.val());
+    localStorage.setItem(".description", input.val());
+    // var element = document.body.querySelector('.element[data-id=123456789]');
+    var parentDiv = event.target.dataset.key;
 }
-var saveBtn = document.getElementsByClassName("keep");
-for (var i = 0; i < saveBtn.length; i++) {
-    saveBtn[i].addEventListener("click", captureSaveEvent);
+var type = document.getElementById("type");
+var saveBtn = document.getElementById("nine");
+saveBtn.addEventListener("click", function(){
+    localStorage.setItem("nine", type.value);
+});
+//use local storage . get item to continue to display value
+// for (var i = 0; i < saveBtn.length; i++) {
+//     saveBtn[i].addEventListener("click", captureSaveEvent);
+//     console.log(saveBtn[i]);
 
-}
+// }
 
 
 
