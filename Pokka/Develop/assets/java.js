@@ -4,14 +4,17 @@
 var currentTime = moment().format('LLLL');
 document.getElementById("currentDay").innerHTML = currentTime;
 console.log(currentTime);
+
 // WHEN I scroll down
 // THEN I am presented with time blocks for standard business hours
+// This is in HTML
 
 // WHEN I view the time blocks for that day
 // THEN each time block is color-coded to indicate whether it is in the past, present, or future
 
 // WHEN I click into a time block
 // THEN I can enter an event
+// input type text is added in html
 
 // WHEN I click the save button for that time block
 // THEN the text for that event is saved in local storage
@@ -22,8 +25,10 @@ console.log(currentTime);
 // var description = "description"
 function captureSaveEvent(event) {
     console.log(event);
-    //variable parent div is equal to event.target.parentdiv save variable of description event.target.parentdiv.description.innertext
+    //variable "parent div" is equal to event.target.parentdiv save variable of description event.target.parentdiv.description.innertext
     //look for the input type in the console might need to save whole parent div as a variable
+    var parentDiv = event.target.container;
+    localStorage.setItem("description", input.val());
 }
 var saveBtn = document.getElementsByClassName("keep");
 for (var i = 0; i < saveBtn.length; i++) {
