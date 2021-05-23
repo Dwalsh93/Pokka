@@ -4,6 +4,10 @@ body {
   line-height: 1;
 }
 
+/* .col {
+  border-top: 1px dashed #000000;
+} */
+
 textarea{
   background: transparent;
   border: none;
@@ -23,11 +27,14 @@ textarea{
 
 .description {
   white-space: pre-wrap;
-  background-color: aquamarine;
+  background-color: rgb(253, 253, 253);
 }
 
 input {
   border: blue;
+  width: 800px;
+  height: 79px;
+  background-color: #d3d3d3;
 
 }
 
@@ -65,11 +72,13 @@ input {
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: #06AED5;
   color: white;
   text-align: center;
+  height: 79px;
+
 }
 
 .saveBtn i:hover {
@@ -78,7 +87,7 @@ input {
 }
 
 button {
-  background-color: #4CAF50; /* Green */
+  background-color: #06AED5; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -86,4 +95,8 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.colorcode {
+  border-top: 1px dashed #000000;
 }
