@@ -32,12 +32,29 @@ $("#nine").val(localStorage.getItem("9"))
 $("#ten").val(localStorage.getItem("10"))
 $("#eleven").val(localStorage.getItem("11"))
 $("#twelve").val(localStorage.getItem("12"))
-$("#one").val(localStorage.getItem("1"))
-$("#two").val(localStorage.getItem("2"))
-$("#three").val(localStorage.getItem("3"))
-$("#four").val(localStorage.getItem("4"))
-$("#five").val(localStorage.getItem("5"))
-// continue to repeat and change ids 
+$("#one").val(localStorage.getItem("13"))
+$("#two").val(localStorage.getItem("14"))
+$("#three").val(localStorage.getItem("15"))
+$("#four").val(localStorage.getItem("16"))
+$("#five").val(localStorage.getItem("17"))
+
+function captureSaveEvent() {
+    var currentTime = moment().hours()
+    console.log(currentTime);
+    for (let i = 9; i <= 17; i++) {
+        var timeBlock = localStorage.getItem('colorcode' + i);
+        $('#input-' + i).val(timeBlock);
+        if (i > currentTimeBlock) {
+            $('#input-' + i).addClass("future");
+        }
+        else if (i < currentTimeBlock) {
+            $('#input-' + i).addClass("past")
+        }
+        else { $('#input-' + i).addClass("present"); }
+    }
+
+}
+// continue to repeat and change ids
 // this keyword selects only "this" function,  id or class
 
 // WHEN I refresh the page
