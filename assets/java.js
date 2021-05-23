@@ -42,7 +42,7 @@ function captureSaveEvent() {
     var currentTime = moment().hours()
     console.log(currentTime);
     for (let i = 9; i <= 17; i++) {
-        var timeBlock = localStorage.getItem('colorcode' + i);
+        var timeBlock = localStorage.getItem('.each' + i);
         $('#input-' + i).val(timeBlock);
         if (i > currentTimeBlock) {
             $('#input-' + i).addClass("future");
